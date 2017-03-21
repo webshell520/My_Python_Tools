@@ -14,7 +14,7 @@ import chardet
 class Injection_Scan:
     def __init__(self,url):
         print '+' + '-' * 50 + '+'
-        print '\t   SQLscan by naihebian'
+        print '\t   SQLscan by github'
         print '+' + '-' * 50 + '+'
 
         self.server='http://127.0.0.1:8775/'
